@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Disha 💕</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  font-family: Pacifico, cursive;
+  font-size: 42px;
+}
+
+img {
+  width: 240px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+a {
+  margin-top: 30px;
+  background: #ffffff;
+  color: #ff5e7e;
+  padding: 15px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 24px;
+  animation: rise 6s infinite;
+}
+
+@keyframes rise {
+  0% { bottom: -10px; opacity: 0; }
+  50% { opacity: 1; }
+  100% { bottom: 110%; opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<audio src="music.mp3" autoplay loop></audio>
+
+<div class="emoji" style="left:15%;">💖</div>
+<div class="emoji" style="left:50%;">🎈</div>
+<div class="emoji" style="left:80%;">✨</div>
+
+<div class="container">
+  <h1>Hey Disha 💕</h1>
+  <img src="disha1.jpg" alt="Disha Photo">
+  <p>Someone amazing turns a year older today 🎉</p>
+  <a href="wish.html">Tap for Magic ✨</a>
+</div>
+
+</body>
+</html>
