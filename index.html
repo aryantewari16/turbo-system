@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Disha 💕</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  color:pink;
+  text-align:center;
+  background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("photo/bg1.jpg");
+  background-size:cover;
+  background-position:center;
+}
+.container{
+  min-height:100vh;
+  padding:30px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+h1{
+  font-family:'Dancing Script',cursive;
+  font-size:64px;
+}
+.carousel{
+  max-width:400px;
+  margin:5px auto;
+  overflow:hidden;
+}
+.track{
+  display:flex;
+  transition:transform .5s ease;
+}
+.slide{
+  min-width:100%;
+  background:none;
+  padding:0px;
+  border-radius:18px;
+}
+.slide img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  border-radius:12px;
+}
+.dots{
+  display:flex;
+  justify-content:center;
+  margin-top:12px;
+}
+.dot{
+  width:12px;
+  height:12px;
+  background:rgba(255,255,255,.6);
+  border-radius:50%;
+  margin:0 6px;
+}
+.dot.active{background:#ff5e7e;}
+a{
+  margin-top:28px;
+  background:none;
+  color:#ff5e7e;
+  padding:16px 38px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <h1>Hey Disha 💕</h1>
+  <p>Swipe the memories ✨</p>
+
+  <div class="carousel">
+    <div class="track" id="track">
+      <div class="slide"><img src="photo/disha1.jpg"></div>
+      <div class="slide"><img src="photo/disha2.jpg"></div>
+      <div class="slide"><img src="photo/disha3.jpg"></div>
+      <div class="slide"><img src="photo/disha4.jpg"></div>
+      <div class="slide"><img src="photo/disha5.jpg"></div>
+    </div>
+  </div>
+
+  <div class="dots" id="dots"></div>
+
+  <a href="wish.html" onclick="play()">Tap for Magic ✨</a>
+</div>
+
+<script>
+const track=document.getElementById("track");
+const dots=document.getElementById("dots");
+let index=0,total=5;
+
+for(let i=0;i<total;i++){
+  let d=document.createElement("span");
+  d.className="dot"+(i===0?" active":"");
+  d.onclick=()=>go(i);
+  dots.appendChild(d);
+}
+const allDots=document.querySelectorAll(".dot");
+
+function go(i){
+  index=i;
+  update();
+}
+function update(){
+  track.style.transform=`translateX(-${index*100}%)`;
+  allDots.forEach(d=>d.classList.remove("active"));
+  allDots[index].classList.add("active");
+}
+setInterval(()=>{index=(index+1)%total;update();},3000);
+function play(){document.getElementById("music").play();}
+</script>
+
+</body>
+</html>

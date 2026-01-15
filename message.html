@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For You 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  color:white;
+  text-align:center;
+  background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("photo/bg4.jpg");
+  background-size:cover;
+}
+.container{
+  padding:20px;
+}
+h1{
+  font-family:'Dancing Script',cursive;
+  font-size:56px;
+}
+p{
+  font-family:'Dancing Script',cursive;
+  font-size:20px;
+}
+.wall{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.wall img{
+  width:100%;
+  border-radius:14px;
+  object-fit:cover;
+}
+.top{height:500px;}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.grid img{height:900px;}
+
+.memory-text {
+  margin: 32px 18px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4b2e2e;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+/* Spacing between lines */
+.memory-text p {
+  margin: 6px 0;
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>Many many happy returns of the day 💕</h1>
+  <p>May your life be filled with laughter and light.</p>
+  <p>May every dream you hold come true.</p>
+  <p>You deserve all the happiness in the world.</p>
+  <p>Thank you for being you — truly special.</p>
+  <p>Here’s to love, smiles, and endless memories ✨</p>
+
+  <div class="wall">
+    <img src="photo/wall1.jpg" class="top">
+    <div class="grid">
+      <img src="photo/wall2.jpg">
+      <img src="photo/wall3.jpg">
+      <img src="photo/wall4.jpg">
+      <img src="photo/wall5.jpg">
+    </div>
+
+  <div class="memory-text reveal">
+    <p>I love you in this life, and in every place we find each other again.</p>
+  </div>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const revealPoint = 100;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+</script>
+
+</body>
+</html>
