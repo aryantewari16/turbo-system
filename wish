@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday 🎂</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #fddb92, #d1fdff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-family: Pacifico, cursive;
+  font-size: 52px;
+  animation: bounce 1.2s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+a {
+  display: inline-block;
+  margin-top: 30px;
+  background: #ffffff;
+  padding: 16px 40px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ff7a7a;
+}
+</style>
+</head>
+
+<body>
+  <div>
+    <h1>HAPPY BIRTHDAY<br>DISHA 🎉💖</h1>
+    <a href="cake.html">Cut the Cake 🎂</a>
+  </div>
+</body>
+</html>
